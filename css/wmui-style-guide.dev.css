@@ -1,0 +1,421 @@
+/* ::: Vendor Imports ::: */
+/* Load files from 'node_modules' folders with postCSS-import plugin.
+ * Modules specified in package.json file */
+@import 'wikimedia-ui-base/wikimedia-ui-base.css';
+@import 'normalize.css';
+
+:root {
+	--font-weight-base: 400;
+	--font-weight-bold: 700;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: var( --wmui-color-base80 ); /* FIXME: var; */
+	color: var( --color-base );
+	margin: 0;
+	font-family: var( --font-family-sans--fallback ); /* Fallback */
+	font-size: 1.6rem;
+	line-height: var( --line-height-base );
+}
+
+/* ::: Text Block-Level Elements ::: */
+/* ... Headings ... */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 3.2rem 0 0;
+	line-height: 1.25;
+	transition: font-size var( --transition-medium ), font-weight var( --transition-medium );
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var( --font-weight-bold );
+}
+
+h1 {
+	font-family: var( --font-family-serif--fallback ); /* Fallback */
+	font-size: 3.2rem;
+	font-weight: var( --font-weight-base );
+}
+
+h2 {
+	font-size: 2.2rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+/* ... Other Block-Level Elements ... */
+blockquote {
+	border-left: 3px solid var( --wmui-color-base70 ); /* FIXME: var */
+	margin: 1.6rem 0 0;
+	padding: 0 1.6rem;
+	font-family: var( --font-family-serif--fallback ); /* Fallback */
+	font-size: 2rem;
+	font-style: italic;
+	line-height: 1.5;
+}
+
+p {
+	margin: 3.2rem 0 0;
+	line-height: 1.5;
+}
+	h1 + p,
+	h2 + p,
+	h3 + p,
+	h4 + p,
+	h5 + p,
+	h6 + p,
+	p + p,
+	p:first-child {
+		margin: 0.8rem 0 0;
+	}
+
+	blockquote + p {
+		margin-top: 1.6rem;
+	}
+
+ul {
+	margin: 0.8rem 0;
+	padding: 0 1.6rem;
+}
+
+figure {
+	margin: 0.8rem 0 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	margin: 1.6rem 0 0;
+}
+
+/* ::: Inline Elements ::: */
+a {
+	color: var( --color-primary );
+	text-decoration: none;
+}
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a:active {
+		color: var( --color-primary--active );
+	}
+
+cite {
+	display: block;
+	margin-top: 0.8em;
+	font-family: var( --font-family-sans-serif--fallback ); /* Fallback */
+	font-size: 1.4rem;
+	font-style: normal;
+}
+
+	cite:before {
+		content: '— ';
+	}
+
+code {
+	background-color: var( --background-color-code );
+	display: inline-block;
+	padding: 0.2rem 0.4rem;
+	font-size: 1.4rem;
+}
+
+section {
+	margin: 5rem 0;
+}
+
+/* ::: General Classes ::: */
+/* ::: Text for Screen Readers only ::: */
+.is-aural {
+	display: block;
+	position: absolute;
+	clip: rect( 1px, 1px, 1px, 1px );
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	overflow: hidden;
+}
+	.is-aural.is-focusable:active,
+	.is-aural.is-focusable:focus {
+		position: static;
+		clip: auto;
+		width: auto;
+		height: auto;
+		margin: 0;
+		text-decoration: underline;
+		overflow: visible;
+	}
+
+.clearfix:before,
+.clearfix:after,
+.content-box:before,
+.content-box:after {
+	content: ' ';
+	display: table;
+}
+
+.clearfix:after,
+.content-box:after {
+	clear: both;
+}
+
+.content-box {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 1.6rem; /* FIXME: var( --grid-padding ); */
+	padding-right: 1.6rem;
+}
+
+
+/* ::: Structure ::: */
+.header {
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 6.4rem;
+	line-height: 6.4rem;
+}
+
+	.site__title {
+		color: var( --wmui-color-base10 ); /* --color-base-emphasized */
+		margin-top: 51px;
+		font-family: var( --font-family-sans--fallback ); /* Fallback */
+		font-weight: var( --font-weight-bold );
+		letter-spacing: 1.3px;
+		display: block;
+	}
+		.site__title a {
+			color: inherit;
+			display: inline-block;
+			line-height: 64px;
+			height: 6.4rem;
+		}
+		.site__title a:hover {
+			color: var( --wmui-color-base10 );
+			text-decoration: none;
+			transition: color var( --transition-medium );
+		}
+
+		.site__logo {
+			background-image: url( '../../img/wmf-blueprint.svg' ); /* stylelint-disable-line function-url-quotes */
+			background-size: 100%;
+			display: block;
+			width: 150px;
+			height: 165px;
+			margin-bottom: 0.4rem;
+			margin-right: 0.8rem;
+			margin-left: -15px;
+			vertical-align: middle;
+		}
+
+/* ... Content ... */
+.page {
+	background-color: var( --background-color-base );
+	position: relative;
+	margin-top: 6.4rem;
+	padding: 6.4rem 0;
+	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
+	overflow-y: hidden;
+}
+
+.content {
+	float: left;
+}
+
+/* ::: Content ::: */
+.page__parent-title {
+	color: var( --color-base--subtle );
+	margin-top: -2.8rem;
+
+}
+
+.page__title {
+	margin-top: -0.8rem;
+}
+
+.page__parent-title + .page__title {
+	margin-top: -0.4rem;
+}
+
+.page__tagline {
+	margin-top: 1.2rem;
+	font-size: 2rem;
+	font-style: italic;
+	font-weight: 100;
+}
+
+.figure__caption {
+	color: var( --color-base--subtle );
+	display: block;
+	margin-top: 0.8rem;
+	font-size: 1.3rem;
+	font-style: italic;
+}
+
+/* ::: Footer ::: */
+.footer {
+	color: var( --color-base );
+	clear: both;
+	padding: 2.4rem 0;
+	font-size: 1.2rem;
+	font-weight: var( --font-weight-base );
+}
+
+.footer__list {
+	margin: 0;
+	padding: 0;
+}
+
+	.footer__list:after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+
+	.footer__list li {
+		list-style: none none;
+		display: block;
+		padding: 0.8rem 0 0;
+	}
+
+	.footer__list li:first-child {
+		padding-top: 0;
+	}
+
+	.footer__list a {
+		font-weight: var( --font-weight-bold );
+	}
+
+	.footer__list + p {
+		margin-top: 1.2rem;
+	}
+
+.style-guide--icon {
+	background-image: url( '../../img/style-guide-icon.svg' ); /* stylelint-disable-line function-url-quotes */
+	background-size: 100%;
+	display: block;
+	width: 60px;
+	height: 59px;
+	margin-bottom: 2rem;
+}
+
+.lnk--wikimedia-project {
+	display: inline-block;
+	border: solid 1px #9aa0a7;
+	border-radius: 2px;
+	padding: 0.4rem 0.6rem;
+	text-transform: uppercase;
+	color: #9aa0a7;
+	font-weight: var( --font-weight-bold );
+}
+
+/* ::: Media Queries ::: */
+/* ... Smartphone only ... */
+@media ( max-width: 767px ) {
+	.page__title {
+		margin-top: -0.4rem;
+		font-size: 2.4rem;
+		font-weight: var( --font-weight-bold );
+	}
+}
+
+/* ... Smartphone portrait ... */
+@media ( min-width: 240px ) {
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+
+	.content-box {
+		transition: padding var( --transition-medium );
+	}
+
+	.site__title a {
+		font-size: 2rem;
+		padding-right: 3.2rem;
+	}
+}
+
+/* ... Smartphone+ portrait ... */
+@media ( min-width: 414px ) {
+	.content-box {
+		padding-left: 3.2rem;
+		padding-right: 3.2rem;
+	}
+
+	.site__title a {
+		font-size: 3rem;
+		letter-spacing: 0.8px;
+	}
+
+	.footer__list li {
+		display: list-item;
+		float: left;
+		padding: 0;
+	}
+
+	.footer__list li:before {
+		content: '\2022'; /* bullet dot: '•' */
+		padding: 0 0.8rem;
+	}
+
+	.footer__list li:first-child:before {
+		content: '';
+		padding: 0;
+	}
+}
+
+/* ... Smartphone landscape ... */
+@media ( min-width: 568px ) {
+	.site__title a {
+		padding-right: 0;
+	}
+}
+
+/* ... Tablet ... */
+@media ( min-width: 768px ) {
+	.content-box {
+		max-width: 960px;
+	}
+}
+
+/* ... Tablet+ / Netbook ... */
+@media ( min-width: 992px ) {
+	.content-box {
+		width: 960px;
+		max-width: none;
+	}
+}
+
+@media ( min-width: 1200px ) {
+	.content-box {
+		width: 960px;
+	}
+
+	.site__title a {
+		font-size: 3.5rem;
+	}
+}

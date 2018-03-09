@@ -1,0 +1,42 @@
+{
+  "name": "wmui-style-guide",
+  "version": "0.1.0",
+  "description": "Wikimedia User Interface Style Guide",
+  "keywords": [
+    "ui"
+  ],
+  "homepage": "https://www.mediawiki.org/wiki/Design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wikimedia/WikimediaUI-Style-Guide.git"
+  },
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "fontfaceobserver": "2.0.9",
+    "normalize.css": "7.0.0",
+    "wikimedia-ui-base": "0.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "8.0.0",
+    "cssnano": "4.0.0-rc.2",
+    "grunt": "1.0.2",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-exec": "3.0.0",
+    "grunt-postcss": "0.9.0",
+    "grunt-stylelint": "0.9.0",
+    "grunt-svgmin": "5.0.0",
+    "pixrem": "4.0.1",
+    "postcss": "6.0.16",
+    "postcss-cssnext": "3.1.0",
+    "postcss-custom-properties": "7.0.0",
+    "postcss-import": "11.0.0",
+    "stylelint": "9.1.1",
+    "stylelint-config-wikimedia": "0.4.2"
+  },
+  "scripts": {
+    "start": "grunt watch",
+    "build": "grunt",
+    "test": "grunt lint"
+  }
+}
