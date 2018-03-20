@@ -192,23 +192,18 @@ section {
 	top: 0;
 	left: 0;
 	right: 0;
-	min-height: 6.4rem;
-	line-height: 6.4rem;
 }
 
 	.site__title {
 		color: var( --wmui-color-base10 ); /* --color-base-emphasized */
-		margin-top: 51px;
+		margin-top: 5.1rem;
 		font-family: var( --font-family-sans--fallback ); /* Fallback */
 		font-weight: var( --font-weight-bold );
-		letter-spacing: 1.3px;
 		display: block;
 	}
 		.site__title a {
 			color: inherit;
 			display: inline-block;
-			line-height: 64px;
-			height: 6.4rem;
 		}
 		.site__title a:hover {
 			color: var( --wmui-color-base10 );
@@ -220,11 +215,11 @@ section {
 			background-image: url( '../../img/wmf-blueprint.svg' ); /* stylelint-disable-line function-url-quotes */
 			background-size: 100%;
 			display: block;
-			width: 150px;
-			height: 165px;
-			margin-bottom: 0.4rem;
+			width: var( --site__logo-width-large );
+			height: var( --site__logo-height-large );
+			margin-bottom: 2rem;
 			margin-right: 0.8rem;
-			margin-left: -15px;
+			margin-left: -0.5rem;
 			vertical-align: middle;
 		}
 
@@ -232,7 +227,7 @@ section {
 .page {
 	background-color: var( --background-color-base );
 	position: relative;
-	margin-top: 6.4rem;
+	margin-top: 3.2rem;
 	padding: 6.4rem 0;
 	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
 	overflow-y: hidden;
@@ -314,8 +309,8 @@ section {
 	background-image: url( '../../img/style-guide-icon.svg' ); /* stylelint-disable-line function-url-quotes */
 	background-size: 100%;
 	display: block;
-	width: 60px;
-	height: 59px;
+	width: var( --style-guide--icon-width );
+	height: var( --style-guide--icon-height );
 	margin-bottom: 2rem;
 }
 
@@ -332,10 +327,19 @@ section {
 /* ::: Media Queries ::: */
 /* ... Smartphone only ... */
 @media ( max-width: 767px ) {
+	.page {
+		padding: 3.2rem 0;
+	}
+
 	.page__title {
 		margin-top: -0.4rem;
-		font-size: 2.4rem;
+		font-size: 1.8rem;
 		font-weight: var( --font-weight-bold );
+	}
+
+	.content-box {
+		padding-left: 2.4rem;
+		padding-right: 2.4rem;
 	}
 }
 
@@ -355,20 +359,19 @@ section {
 
 	.site__title a {
 		font-size: 2rem;
-		padding-right: 3.2rem;
 	}
 }
 
 /* ... Smartphone+ portrait ... */
 @media ( min-width: 414px ) {
-	.content-box {
-		padding-left: 3.2rem;
-		padding-right: 3.2rem;
-	}
-
 	.site__title a {
 		font-size: 3rem;
-		letter-spacing: 0.8px;
+	}
+
+	.site__logo {
+		width: var( --site__logo-width-small );
+		height: var( --site__logo-height-small );
+		margin-left: -1px;
 	}
 
 	.footer__list li {
@@ -391,7 +394,12 @@ section {
 /* ... Smartphone landscape ... */
 @media ( min-width: 568px ) {
 	.site__title a {
-		padding-right: 0;
+		letter-spacing: 0.8px;
+	}
+
+	.site__logo {
+		width: var( --site__logo-width-large );
+		height: var( --site__logo-height-large );
 	}
 }
 
@@ -416,6 +424,7 @@ section {
 	}
 
 	.site__title a {
+		letter-spacing: 1.1px;
 		font-size: 3.5rem;
 	}
 }
