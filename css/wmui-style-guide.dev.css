@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background-color: var( --wmui-color-base80 ); /* FIXME: var; */
+	background-color: var( --background-color-base );
 	color: var( --color-base );
 	margin: 0;
 	font-family: var( --font-family-sans--fallback ); /* Fallback */
@@ -212,14 +212,14 @@ section {
 		}
 
 		.site__logo {
-			background-image: url( ../../img/wmf-blueprint.svg );
+			background-image: url( ../../img/Wikimedia-Foundation-blueprint.svg );
 			background-size: 100%;
 			display: block;
 			width: var( --site__logo-width-large );
 			height: var( --site__logo-height-large );
 			margin-bottom: 2rem;
 			margin-right: 0.8rem;
-			margin-left: -0.5rem;
+			margin-left: -2rem;
 			vertical-align: middle;
 		}
 
@@ -229,7 +229,6 @@ section {
 	position: relative;
 	margin-top: 3.2rem;
 	padding: 6.4rem 0;
-	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
 	overflow-y: hidden;
 }
 
@@ -332,7 +331,7 @@ section {
 	background-color: #f8f9fa;
 	flex-basis: 0;
 	flex-grow: 1;
-	padding: 1rem 3rem 3rem;
+	padding: 0 3.2rem 3.2rem;
 	border: 1px solid #eaecf0;
 	border-radius: var( --border-radius-base );
 }
@@ -361,11 +360,11 @@ section {
 
 .lnk--wikimedia-project {
 	display: inline-block;
-	border: solid 1px #9aa0a7;
+	border: var( --border-base );
 	border-radius: var( --border-radius-base );
 	padding: 0.4rem 0.6rem;
 	text-transform: uppercase;
-	color: #9aa0a7;
+	color: #36c;
 	font-weight: var( --font-weight-bold );
 }
 
@@ -373,7 +372,12 @@ section {
 /* ... Smartphone only ... */
 @media ( max-width: 767px ) {
 	.page {
-		padding: 3.2rem 0;
+		margin-top: 1.6rem;
+		padding: 0;
+	}
+
+	.site__logo {
+		margin-left: 0;
 	}
 
 	.page__title {
@@ -426,7 +430,8 @@ section {
 	}
 
 	.site__title a {
-		font-size: 2rem;
+		font-size: 2.4rem;
+		letter-spacing: 0.8px;
 	}
 }
 
@@ -434,12 +439,12 @@ section {
 @media ( min-width: 414px ) {
 	.site__title a {
 		font-size: 3rem;
+		letter-spacing: 1.1px;
 	}
 
 	.site__logo {
 		width: var( --site__logo-width-small );
 		height: var( --site__logo-height-small );
-		margin-left: -1px;
 	}
 
 	.footer__list li {
@@ -461,10 +466,6 @@ section {
 
 /* ... Smartphone landscape ... */
 @media ( min-width: 568px ) {
-	.site__title a {
-		letter-spacing: 0.8px;
-	}
-
 	.site__logo {
 		width: var( --site__logo-width-large );
 		height: var( --site__logo-height-large );
@@ -492,7 +493,6 @@ section {
 	}
 
 	.site__title a {
-		letter-spacing: 1.1px;
 		font-size: 3.5rem;
 	}
 }

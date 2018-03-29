@@ -1,17 +1,17 @@
 :root {
-  --width-site: 700px;
-  --width-site-desktop-wide: 700px;
-  --site__logo-width-large: 15rem;
-  --site__logo-height-large: 16.5rem;
-  --site__logo-width-small: 12.2rem;
-  --site__logo-height-small: 13.5rem;
-  --style-guide--icon-width: 6rem;
-  --style-guide--icon-height: 5.9rem;
-  --participate--icon-width: 5.4rem;
-  --participate--icon-height: 4.8rem;
+	--width-site: 700px;
+	--width-site-desktop-wide: 700px;
+	--site__logo-width-large: 17.9rem;
+	--site__logo-height-large: 19.7rem;
+	--site__logo-width-small: 15.4rem;
+	--site__logo-height-small: 16.9rem;
+	--style-guide--icon-width: 6rem;
+	--style-guide--icon-height: 5.9rem;
+	--participate--icon-width: 5.4rem;
+	--participate--icon-height: 4.8rem;
 }
 
 body,
 .site__title {
-  font-family: -apple-system, BlinkMacSystemFont, 'Seogoe UI', 'Roboto', 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Seogoe UI', 'Roboto', 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }

@@ -457,7 +457,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	background-color: #eaecf0; /* FIXME: var; */
+	background-color: #fff;
 	color: #222;
 	margin: 0;
 	font-family: sans-serif; /* Fallback */
@@ -630,7 +630,7 @@ section {
 			transition: color 250ms;
 		}
 .site__logo {
-			background-image: url( ../../img/wmf-blueprint.svg );
+			background-image: url( ../../img/Wikimedia-Foundation-blueprint.svg );
 			-webkit-background-size: 100% 100%;
 			   -moz-background-size: 100%;
 			        background-size: 100%;
@@ -639,7 +639,7 @@ section {
 			height: var(--site__logo-height-large);
 			margin-bottom: 2rem;
 			margin-right: 0.8rem;
-			margin-left: -0.5rem;
+			margin-left: -2rem;
 			vertical-align: middle;
 		}
 /* ... Content ... */
@@ -648,9 +648,6 @@ section {
 	position: relative;
 	margin-top: 3.2rem;
 	padding: 6.4rem 0;
-	-webkit-box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
-	   -moz-box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
-	        box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, 0.25 );
 	overflow-y: hidden;
 }
 .content {
@@ -739,6 +736,7 @@ section {
 	        flex: 1 0 500px;
 }
 .project-cards > section {
+	background-color: #f8f9fa;
 	-webkit-flex-basis: 0;
 	    -ms-flex-preferred-size: 0;
 	        flex-basis: 0;
@@ -747,11 +745,10 @@ section {
 	   -moz-box-flex: 1;
 	    -ms-flex-positive: 1;
 	        flex-grow: 1;
-	padding: 1rem 3rem 3rem;
+	padding: 0 3.2rem 3.2rem;
+	border: 1px solid #eaecf0;
 	-moz-border-radius: 2px;
 	     border-radius: 2px;
-	background-color: #f8f9fa;
-	border: solid 1px #eaecf0;
 }
 .project-cards > section:nth-child( even ) {
 	margin-left: 4rem;
@@ -778,19 +775,24 @@ section {
 }
 .lnk--wikimedia-project {
 	display: inline-block;
-	border: solid 1px #9aa0a7;
+	border: 1px solid #a2a9b1;
 	-moz-border-radius: 2px;
 	     border-radius: 2px;
 	padding: 0.4rem 0.6rem;
 	text-transform: uppercase;
-	color: #9aa0a7;
+	color: #36c;
 	font-weight: 700;
 }
 /* ::: Media Queries ::: */
 /* ... Smartphone only ... */
 @media ( max-width: 767px ) {
 	.page {
-		padding: 3.2rem 0;
+		margin-top: 1.6rem;
+		padding: 0;
+	}
+
+	.site__logo {
+		margin-left: 0;
 	}
 
 	.page__title {
@@ -847,19 +849,20 @@ section {
 	}
 
 	.site__title a {
-		font-size: 2rem;
+		font-size: 2.4rem;
+		letter-spacing: 0.8px;
 	}
 }
 /* ... Smartphone+ portrait ... */
 @media ( min-width: 414px ) {
 	.site__title a {
 		font-size: 3rem;
+		letter-spacing: 1.1px;
 	}
 
 	.site__logo {
 		width: var(--site__logo-width-small);
 		height: var(--site__logo-height-small);
-		margin-left: -1px;
 	}
 
 	.footer__list li {
@@ -880,10 +883,6 @@ section {
 }
 /* ... Smartphone landscape ... */
 @media ( min-width: 568px ) {
-	.site__title a {
-		letter-spacing: 0.8px;
-	}
-
 	.site__logo {
 		width: var(--site__logo-width-large);
 		height: var(--site__logo-height-large);
@@ -908,7 +907,6 @@ section {
 	}
 
 	.site__title a {
-		letter-spacing: 1.1px;
 		font-size: 3.5rem;
 	}
 }
