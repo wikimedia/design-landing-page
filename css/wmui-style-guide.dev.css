@@ -212,7 +212,7 @@ section {
 		}
 
 		.site__logo {
-			background-image: url( '../../img/wmf-blueprint.svg' ); /* stylelint-disable-line function-url-quotes */
+			background-image: url( ../../img/wmf-blueprint.svg );
 			background-size: 100%;
 			display: block;
 			width: var( --site__logo-width-large );
@@ -235,6 +235,24 @@ section {
 
 .content {
 	float: left;
+}
+
+.nav {
+	padding: 0;
+}
+
+.nav li {
+	display: inline-block;
+}
+
+.nav li:after {
+	content: '\00B7';
+	padding: 0 1rem;
+	color: #9aa0a7;
+}
+
+.nav li.nav-last:after {
+	content: '';
 }
 
 /* ::: Content ::: */
@@ -306,11 +324,20 @@ section {
 	}
 
 .style-guide--icon {
-	background-image: url( '../../img/style-guide-icon.svg' ); /* stylelint-disable-line function-url-quotes */
+	background-image: url( ../../img/style-guide-icon.svg );
 	background-size: 100%;
 	display: block;
 	width: var( --style-guide--icon-width );
 	height: var( --style-guide--icon-height );
+	margin-bottom: 2rem;
+}
+
+.participate--icon {
+	background-image: url( ../../img/participate-icon.svg );
+	background-size: 100%;
+	display: block;
+	width: var( --participate--icon-width );
+	height: var( --participate--icon-height );
 	margin-bottom: 2rem;
 }
 

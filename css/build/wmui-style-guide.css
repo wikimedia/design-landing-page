@@ -630,7 +630,7 @@ section {
 			transition: color 250ms;
 		}
 .site__logo {
-			background-image: url( '../../img/wmf-blueprint.svg' ); /* stylelint-disable-line function-url-quotes */
+			background-image: url( ../../img/wmf-blueprint.svg );
 			-webkit-background-size: 100% 100%;
 			   -moz-background-size: 100%;
 			        background-size: 100%;
@@ -655,6 +655,20 @@ section {
 }
 .content {
 	float: left;
+}
+.nav {
+	padding: 0;
+}
+.nav li {
+	display: inline-block;
+}
+.nav li:after {
+	content: '\00B7';
+	padding: 0 1rem;
+	color: #9aa0a7;
+}
+.nav li.nav-last:after {
+	content: '';
 }
 /* ::: Content ::: */
 .page__parent-title {
@@ -713,13 +727,23 @@ section {
 		margin-top: 1.2rem;
 	}
 .style-guide--icon {
-	background-image: url( '../../img/style-guide-icon.svg' ); /* stylelint-disable-line function-url-quotes */
+	background-image: url( ../../img/style-guide-icon.svg );
 	-webkit-background-size: 100% 100%;
 	   -moz-background-size: 100%;
 	        background-size: 100%;
 	display: block;
 	width: var(--style-guide--icon-width);
 	height: var(--style-guide--icon-height);
+	margin-bottom: 2rem;
+}
+.participate--icon {
+	background-image: url( ../../img/participate-icon.svg );
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100%;
+	        background-size: 100%;
+	display: block;
+	width: var(--participate--icon-width);
+	height: var(--participate--icon-height);
 	margin-bottom: 2rem;
 }
 .lnk--wikimedia-project {
