@@ -323,6 +323,24 @@ section {
 		margin-top: 1.2rem;
 	}
 
+.project-cards {
+	display: flex;
+	flex: 1 0 500px;
+}
+
+.project-cards > section {
+	background-color: #f8f9fa;
+	flex-basis: 0;
+	flex-grow: 1;
+	padding: 1rem 3rem 3rem;
+	border: 1px solid #eaecf0;
+	border-radius: var( --border-radius-base );
+}
+
+.project-cards > section:nth-child( even ) {
+	margin-left: 4rem;
+}
+
 .style-guide--icon {
 	background-image: url( ../../img/style-guide-icon.svg );
 	background-size: 100%;
@@ -344,7 +362,7 @@ section {
 .lnk--wikimedia-project {
 	display: inline-block;
 	border: solid 1px #9aa0a7;
-	border-radius: 2px;
+	border-radius: var( --border-radius-base );
 	padding: 0.4rem 0.6rem;
 	text-transform: uppercase;
 	color: #9aa0a7;
@@ -367,6 +385,29 @@ section {
 	.content-box {
 		padding-left: 2.4rem;
 		padding-right: 2.4rem;
+	}
+
+	.project-cards {
+		display: block;
+	}
+
+	.project-cards > section {
+		margin: 0;
+		border-radius: 0;
+		border-bottom-width: 0;
+	}
+
+	.project-cards > section:first-child {
+		border-radius: var( --border-radius-base ) var( --border-radius-base ) 0 0;
+	}
+
+	.project-cards > section:last-child {
+		border-radius: 0 0 var( --border-radius-base ) var( --border-radius-base );
+		border-bottom-width: 1px;
+	}
+
+	.project-cards > section:nth-child( even ) {
+		margin-left: 0;
 	}
 }
 
