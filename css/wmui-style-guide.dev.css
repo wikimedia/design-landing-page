@@ -433,21 +433,21 @@ section {
 /* ... Tablet ... */
 @media ( min-width: 768px ) {
 	.content-box {
-		max-width: 960px;
+		max-width: var( --width-site );
 	}
 }
 
 /* ... Tablet+ / Netbook ... */
 @media ( min-width: 992px ) {
 	.content-box {
-		width: 960px;
+		width: var( --width-site );
 		max-width: none;
 	}
 }
 
 @media ( min-width: 1200px ) {
 	.content-box {
-		width: 960px;
+		width: var( --width-site-desktop-wide );
 	}
 
 	.site__title a {

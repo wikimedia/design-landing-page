@@ -1,4 +1,6 @@
 :root {
+  --width-site: 700px;
+  --width-site-desktop-wide: 700px;
   --site__logo-width-large: 15rem;
   --site__logo-height-large: 16.5rem;
   --site__logo-width-small: 12.2rem;
