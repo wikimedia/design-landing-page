@@ -227,13 +227,17 @@ section {
 .page {
 	background-color: var( --background-color-base );
 	position: relative;
-	margin-top: 3.2rem;
-	padding: 6.4rem 0;
+	margin-top: 2.4rem;
+	margin-bottom: 3.2rem;
 	overflow-y: hidden;
 }
 
 .content {
 	float: left;
+}
+
+.content__introduction {
+	font-size: 1.8rem;
 }
 
 .nav {
