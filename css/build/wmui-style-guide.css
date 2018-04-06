@@ -762,8 +762,8 @@ section {
 	   -moz-background-size: 100%;
 	        background-size: 100%;
 	display: block;
-	width: var(--style-guide--icon-width);
-	height: var(--style-guide--icon-height);
+	width: var(--project--icon-width);
+	height: var(--project--icon-height);
 	margin-bottom: 2rem;
 }
 .participate--icon {
@@ -772,8 +772,8 @@ section {
 	   -moz-background-size: 100%;
 	        background-size: 100%;
 	display: block;
-	width: var(--participate--icon-width);
-	height: var(--participate--icon-height);
+	width: var(--project--icon-width);
+	height: var(--project--icon-height);
 	margin-bottom: 2rem;
 }
 .lnk--wikimedia-project {

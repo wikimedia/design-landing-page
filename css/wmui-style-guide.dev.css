@@ -348,8 +348,8 @@ section {
 	background-image: url( ../../img/style-guide-icon.svg );
 	background-size: 100%;
 	display: block;
-	width: var( --style-guide--icon-width );
-	height: var( --style-guide--icon-height );
+	width: var( --project--icon-width );
+	height: var( --project--icon-height );
 	margin-bottom: 2rem;
 }
 
@@ -357,8 +357,8 @@ section {
 	background-image: url( ../../img/participate-icon.svg );
 	background-size: 100%;
 	display: block;
-	width: var( --participate--icon-width );
-	height: var( --participate--icon-height );
+	width: var( --project--icon-width );
+	height: var( --project--icon-height );
 	margin-bottom: 2rem;
 }
 
