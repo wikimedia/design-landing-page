@@ -501,6 +501,8 @@ section {
 	}
 }
 
+@import 'wikimedia-ui-base/wikimedia-ui-base.css';
+
 :root {
 	--width-site: 700px;
 	--width-site-desktop-wide: 700px;
@@ -515,4 +517,30 @@ section {
 body,
 .site__title {
 	font-family: -apple-system, BlinkMacSystemFont, 'Seogoe UI', 'Roboto', 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.project-cards > section {
+	padding: 0;
+}
+
+.card__target {
+	display: block;
+	color: var( --color-base );
+	padding: 3.2rem;
+	text-decoration: none;
+}
+	.card__target:hover {
+		text-decoration: none;
+	}
+
+	.card__target:hover .link {
+		text-decoration: underline;
+	}
+
+.card__title {
+	margin-top: 0;
+}
+
+.link {
+	color: var( --color-primary );
 }
