@@ -10,9 +10,7 @@ module.exports = function ( grunt ) {
 
 	// PostCSS processors without minifier
 	var postCssProcessorsDev = [
-		require( 'postcss-import' )( {
-			from: "css/wmui-style-guide.dev.css"
-		} ),
+		require( 'postcss-import' )(),
 		require( 'postcss-custom-properties' )( {
 			preserve: false
 		} ),
