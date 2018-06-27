@@ -635,8 +635,8 @@ section {
 			   -moz-background-size: 100%;
 			        background-size: 100%;
 			display: block;
-			width: var(--site__logo-width-large);
-			height: var(--site__logo-height-large);
+			width: 17.9rem;
+			height: 19.7rem;
 			margin-bottom: 2rem;
 			margin-right: 0.8rem;
 			margin-left: -2rem;
@@ -762,8 +762,8 @@ section {
 	   -moz-background-size: 100%;
 	        background-size: 100%;
 	display: block;
-	width: var(--project--icon-width);
-	height: var(--project--icon-height);
+	width: 6rem;
+	height: 5.9rem;
 	margin-bottom: 2rem;
 }
 .participate--icon {
@@ -772,8 +772,8 @@ section {
 	   -moz-background-size: 100%;
 	        background-size: 100%;
 	display: block;
-	width: var(--project--icon-width);
-	height: var(--project--icon-height);
+	width: 6rem;
+	height: 5.9rem;
 	margin-bottom: 2rem;
 }
 .lnk--wikimedia-project {
@@ -864,8 +864,8 @@ section {
 	}
 
 	.site__logo {
-		width: var(--site__logo-width-small);
-		height: var(--site__logo-height-small);
+		width: 15.4rem;
+		height: 16.9rem;
 	}
 
 	.footer__list li {
@@ -887,29 +887,33 @@ section {
 /* ... Smartphone landscape ... */
 @media ( min-width: 568px ) {
 	.site__logo {
-		width: var(--site__logo-width-large);
-		height: var(--site__logo-height-large);
+		width: 17.9rem;
+		height: 19.7rem;
 	}
 }
 /* ... Tablet ... */
 @media ( min-width: 768px ) {
 	.content-box {
-		max-width: var(--width-site);
+		max-width: 700px;
 	}
 }
 /* ... Tablet+ / Netbook ... */
 @media ( min-width: 992px ) {
 	.content-box {
-		width: var(--width-site);
+		width: 700px;
 		max-width: none;
 	}
 }
 @media ( min-width: 1200px ) {
 	.content-box {
-		width: var(--width-site-desktop-wide);
+		width: 700px;
 	}
 
 	.site__title a {
 		font-size: 3.5rem;
 	}
+}
+body,
+.site__title {
+	font-family: -apple-system, BlinkMacSystemFont, 'Seogoe UI', 'Roboto', 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
