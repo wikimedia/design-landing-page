@@ -38,7 +38,7 @@ module.exports = function ( grunt ) {
 		// Lint – Styles
 		stylelint: {
 			src: [
-				'css/*.dev.css',
+				'css/*.css',
 				'!node_modules/**'
 			]
 		},
