@@ -42,13 +42,6 @@ module.exports = function ( grunt ) {
 			]
 		},
 
-		concat: {
-			dist: {
-				src: [ 'css/wmui-style-guide.dev.css', 'css/design-landing-site-specific.css' ],
-				dest: 'css/build/design-landing-site.concat.css'
-			}
-		},
-
 		// Postprocessing Styles
 		postcss: {
 			// Output unminified compiled CSS file into `build` dir
@@ -56,8 +49,8 @@ module.exports = function ( grunt ) {
 				options: {
 					processors: postCssProcessorsDev
 				},
-				src: 'css/build/design-landing-site.concat.css',
-				dest: 'css/build/design-landing-site.css'
+				src: 'css/design-landing-site.css',
+				dest: 'css/build/design-landing-site.concat.css'
 			},
 			// Output minified compiled CSS file +  src maps into `build` dir
 			min: {
@@ -68,7 +61,7 @@ module.exports = function ( grunt ) {
 					},
 					processors: postCssProcessorsMin
 				},
-				src: 'css/build/design-landing-site.css',
+				src: 'css/design-landing-site.css',
 				dest: 'css/build/design-landing-site.min.css'
 			}
 		},
@@ -121,5 +114,5 @@ module.exports = function ( grunt ) {
 
 	grunt.registerTask( 'lint', [ 'stylelint' ] );
 	grunt.registerTask( 'imagery', [ 'svgmin' ] );
-	grunt.registerTask( 'default', [ 'lint', 'concat', 'postcss:dev', 'postcss:min' ] );
+	grunt.registerTask( 'default', [ 'lint', 'postcss:dev', 'postcss:min' ] );
 };

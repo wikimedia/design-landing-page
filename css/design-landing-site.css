@@ -1,4 +1,5 @@
 @import 'wikimedia-ui-base/wikimedia-ui-base.css';
+@import './_wmui-style-guide.dev.css';
 
 :root {
 	--width-site: 700px;
