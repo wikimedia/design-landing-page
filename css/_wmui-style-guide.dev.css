@@ -397,6 +397,7 @@ section {
 
 	.project-cards {
 		display: block;
+		margin-top: 0.4rem;
 	}
 
 	.project-cards > section {
