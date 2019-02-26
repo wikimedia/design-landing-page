@@ -34,7 +34,7 @@ module.exports = function ( grunt ) {
 	var postCssProcessorsMin = postCssProcessorsDev.concat( [ require( 'cssnano' )() ] );
 
 	grunt.initConfig( {
-		// Lint – Styles
+		// Lint – Stylesheets
 		stylelint: {
 			src: [
 				'css/*.css',
@@ -42,7 +42,7 @@ module.exports = function ( grunt ) {
 			]
 		},
 
-		// Postprocessing Styles
+		// Postprocessing Stylesheets
 		postcss: {
 			// Output unminified compiled CSS file into `build` dir
 			dev: {
