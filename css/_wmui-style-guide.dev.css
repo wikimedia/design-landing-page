@@ -337,6 +337,7 @@ section {
 	flex-grow: 1;
 	padding: 0 3.2rem 3.2rem;
 	border: 1px solid #eaecf0;
+	margin: 2.5rem 0;
 	border-radius: var( --border-radius-base );
 }
 
@@ -355,6 +356,24 @@ section {
 
 .participate--icon {
 	background-image: url( ../../img/participate-icon.svg );
+	background-size: 100%;
+	display: block;
+	width: var( --project--icon-width );
+	height: var( --project--icon-height );
+	margin-bottom: 2rem;
+}
+
+.blog--icon {
+	background-image: url( ../../img/blog-icon.svg );
+	background-size: 100%;
+	display: block;
+	width: var( --project--icon-width );
+	height: var( --project--icon-height );
+	margin-bottom: 2rem;
+}
+
+.research--icon {
+	background-image: url( ../../img/research-icon.svg );
 	background-size: 100%;
 	display: block;
 	width: var( --project--icon-width );
