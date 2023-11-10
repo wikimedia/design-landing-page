@@ -186,7 +186,6 @@ section {
 	padding-right: 1.6rem;
 }
 
-
 /* ::: Structure ::: */
 .header {
 	top: 0;
@@ -262,7 +261,6 @@ section {
 .page__parent-title {
 	color: var( --color-base--subtle );
 	margin-top: -2.8rem;
-
 }
 
 .page__title {

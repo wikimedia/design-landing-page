@@ -4,6 +4,9 @@
 		"font-weight-notation": null,
 		"indentation": null,
 		"max-empty-lines": null,
-		"no-descending-specificity": null
+		"no-descending-specificity": null,
+		"rule-empty-line-before": null,
+		"selector-pseudo-element-colon-notation": null,
+		"stylistic/indentation": null
 	}
 }
